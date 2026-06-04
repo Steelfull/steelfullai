@@ -1,0 +1,45 @@
+name: Deploy to Hostinger VPS
+
+# Läuft bei jedem Push auf den main-Branch – das ist die CI/CD-Pipeline.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {} # erlaubt auch manuelles Auslösen über die GitHub-Oberfläche
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  build-check:
+    name: Build prüfen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+  deploy:
+    name: Auf VPS deployen
+    needs: build-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Per SSH auf dem VPS bauen & neu starten
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            set -e
+            cd /opt/steelfullai
+            git pull origin main
+            docker compose up -d --build
+            docker image prune -f

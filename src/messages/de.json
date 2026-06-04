@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "SteelfullAI — Geschäftsautomatisierung & Intelligente Systeme",
+    "description": "Ich helfe Unternehmen, repetitive Arbeit zu eliminieren, Abläufe zu automatisieren und die Reaktionszeit gegenüber Kunden zu verbessern — durch Software, Automatisierung und intelligente Systeme. Direkt mit Tim-Luka Stahl.",
+    "keywords": "Geschäftsautomatisierung, Prozessautomatisierung, KI Automatisierung, Softwareentwicklung, KI-Agenten, WhatsApp Automatisierung"
+  },
+  "nav": {
+    "problems": "Probleme",
+    "process": "Ablauf",
+    "about": "Über mich",
+    "faq": "FAQ",
+    "bookCall": "Strategiegespräch buchen",
+    "menu": "Menü",
+    "language": "Sprache"
+  },
+  "hero": {
+    "badge": "Geschäftsautomatisierung & Intelligente Systeme",
+    "headline": "Verwandeln Sie Manuelle Prozesse In Systeme, Die Für Sie Arbeiten",
+    "subheadline": "Ich helfe Unternehmen, repetitive Arbeit zu eliminieren, Abläufe zu automatisieren und die Reaktionszeit gegenüber Kunden zu verbessern — durch Software, Automatisierung und intelligente Systeme.",
+    "primaryCta": "Strategiegespräch buchen",
+    "secondaryCta": "WhatsApp",
+    "trust": {
+      "direct": "Direkt mit Tim-Luka Stahl",
+      "noObligation": "Unverbindlich",
+      "response": "Antwort innerhalb von 24 Stunden"
+    },
+    "flow": {
+      "inquiry": "Kundenanfrage",
+      "inquiryMeta": "WhatsApp · E-Mail · Formular",
+      "automation": "Automatisierung",
+      "automationMeta": "Routing · Logik · Regeln",
+      "systems": "Geschäftssysteme",
+      "systemsMeta": "CRM · ERP · Kalender",
+      "result": "Ergebnis",
+      "resultMeta": "Beantwortet · Erfasst · Erledigt",
+      "caption": "Eine einzelne Anfrage, durchgängig bearbeitet — ohne dass jemand eine Taste berührt."
+    }
+  },
+  "roi": {
+    "label": "Effizienz-Rechner",
+    "title": "Sehen Sie, Was Repetitive Arbeit Wirklich Kostet",
+    "question": "Wie viele Stunden pro Woche gehen durch repetitive Aufgaben verloren?",
+    "inputSuffix": "Stunden / Woche",
+    "monthly": "Verlorene Stunden pro Monat",
+    "yearly": "Verlorene Stunden pro Jahr",
+    "efficiency": "Durch Automatisierung rückgewinnbar",
+    "weeksValue": "{count} Wochen Vollzeitarbeit pro Jahr",
+    "cta": "Automatisierungspotenziale entdecken",
+    "disclaimer": "Schätzungen basieren auf Automatisierungen, die typischerweise 70 % der Zeit für repetitive Aufgaben zurückgewinnen. Die tatsächlichen Ergebnisse werden im Audit ermittelt."
+  },
+  "problem": {
+    "label": "Das Problem",
+    "title": "Die Verborgenen Kosten Manueller Arbeit",
+    "subtitle": "Die meiste Ineffizienz ist unsichtbar. Sie steckt in alltäglichen Aufgaben, die normal wirken — bis man die Stunden zusammenzählt.",
+    "items": [
+      {
+        "title": "Ein Kunde wartet auf Antwort",
+        "desc": "Nachrichten kommen nach Feierabend und bleiben unbeantwortet. Am Morgen ist der Kaufimpuls — und manchmal der Kunde — bereits weg."
+      },
+      {
+        "title": "Ein Mitarbeiter kopiert dieselben Daten",
+        "desc": "Dieselbe Information wird vom Postfach in die Tabelle und ins CRM abgetippt. Stunden verschwinden in Arbeit, die nichts Neues schafft."
+      },
+      {
+        "title": "Ein Lead gerät still in Vergessenheit",
+        "desc": "Eine Anfrage verschwindet zwischen Chat-App und Notizbuch. Niemand hat nachgefasst, und niemand bemerkte den Umsatz, der verloren ging."
+      },
+      {
+        "title": "Systeme, die nicht miteinander reden",
+        "desc": "Jedes Tool hält einen Teil der Wahrheit, doch keines teilt ihn. Menschen werden zur Integration — manuell, jeden Tag."
+      },
+      {
+        "title": "Engpässe, die nur eine Person lösen kann",
+        "desc": "Die Arbeit stockt, weil ein einzelner Schritt von einer einzelnen Person abhängt. Wachstum verlängert die Warteschlange, statt sie zu verkürzen."
+      }
+    ]
+  },
+  "transformation": {
+    "label": "Der Wandel",
+    "title": "Was Sich Nach Der Automatisierung Ändert",
+    "subtitle": "Dieselbe Anfrage. Dieselben Systeme. Der Unterschied ist alles, was früher dazwischen geschah.",
+    "beforeLabel": "Vorher",
+    "afterLabel": "Nachher",
+    "beforeTag": "Manuell · 5 Übergaben · Stunden Verzögerung",
+    "afterTag": "Automatisiert · 1 Workflow · Sekunden",
+    "before": [
+      {
+        "node": "WhatsApp",
+        "meta": "Nachricht trifft ein"
+      },
+      {
+        "node": "Mitarbeiter",
+        "meta": "Liest & interpretiert"
+      },
+      {
+        "node": "Tabelle",
+        "meta": "Kopiert Daten von Hand"
+      },
+      {
+        "node": "CRM",
+        "meta": "Gibt dieselben Daten erneut ein"
+      },
+      {
+        "node": "Kunde",
+        "meta": "Erhält endlich Antwort"
+      }
+    ],
+    "after": [
+      {
+        "node": "WhatsApp",
+        "meta": "Nachricht trifft ein"
+      },
+      {
+        "node": "SteelfullAI Workflow",
+        "meta": "Versteht, routet, erfasst"
+      },
+      {
+        "node": "CRM",
+        "meta": "Automatisch aktualisiert"
+      },
+      {
+        "node": "Kunde",
+        "meta": "In Sekunden beantwortet"
+      }
+    ]
+  },
+  "impact": {
+    "label": "Geschäftlicher Nutzen",
+    "title": "Ergebnisse, Die Sie Messen Können",
+    "subtitle": "Automatisierung ist nicht das Ziel. Das hier ist es.",
+    "items": [
+      {
+        "stat": "Schneller",
+        "title": "Schnellere Kundenreaktion",
+        "desc": "Anfragen werden sofort bestätigt und weitergeleitet, Tag und Nacht — damit Interesse nie abkühlt, während Sie schlafen."
+      },
+      {
+        "stat": "Weniger",
+        "title": "Weniger repetitive Arbeit",
+        "desc": "Die Copy-Paste-Aufgaben, die den Tag Ihres Teams auffressen, werden still im Hintergrund erledigt."
+      },
+      {
+        "stat": "Klarer",
+        "title": "Mehr operative Transparenz",
+        "desc": "Jede Anfrage, jeder Status und jede Übergabe wird erfasst — Sie sehen, was passiert, ohne nachfragen zu müssen."
+      },
+      {
+        "stat": "Weniger",
+        "title": "Weniger manuelle Fehler",
+        "desc": "Wenn Daten sich selbst bewegen, werden sie nicht mehr abgetippt, falsch beschriftet und zwischen Systemen verloren."
+      },
+      {
+        "stat": "Skalierbar",
+        "title": "Abläufe, die skalieren",
+        "desc": "Mehr Volumen bedeutet nicht mehr Personal. Ihre Systeme fangen das Wachstum auf."
+      }
+    ]
+  },
+  "about": {
+    "label": "Über mich",
+    "title": "Arbeiten Sie Direkt Mit Der Person, Die Die Lösung Baut",
+    "greeting": "Hallo, ich bin Tim-Luka Stahl.",
+    "p1": "Ich bin Softwareentwickler und Spezialist für Geschäftsautomatisierung. Ich arbeite direkt mit jedem Kunden, um Ineffizienzen zu erkennen, repetitive Arbeit zu automatisieren und Systeme zu bauen, die Abläufe verbessern.",
+    "p2": "Vom ersten Strategiegespräch bis zur fertigen Lösung gibt es keine Schicht zwischen uns. Sie erklären das Problem der Person, die die Antwort entwirft und baut.",
+    "points": [
+      "Kein Vertriebsteam",
+      "Keine Account-Manager",
+      "Kein Outsourcing"
+    ],
+    "closing": "Von der Strategie bis zur Umsetzung arbeiten Sie direkt mit mir."
+  },
+  "process": {
+    "label": "Ablauf",
+    "title": "So Funktioniert Es",
+    "subtitle": "Ein klarer Weg von „das bremst uns aus“ zu „das läuft von selbst“.",
+    "steps": [
+      {
+        "title": "Audit",
+        "desc": "Wir bilden ab, wie die Arbeit heute wirklich fließt — die Tools, die Übergaben und die Stunden, die still aus Ihrem Betrieb sickern."
+      },
+      {
+        "title": "Strategie",
+        "desc": "Ich priorisiere die Automatisierungen mit dem höchsten Nutzen und geringsten Risiko und mache daraus einen konkreten, sequenzierten Plan."
+      },
+      {
+        "title": "Umsetzung",
+        "desc": "Ich entwerfe und baue die Lösung, verbinde sie mit Ihren bestehenden Systemen und teste sie an realen Fällen — direkt mit Ihnen."
+      },
+      {
+        "title": "Optimierung",
+        "desc": "Sobald sie live ist, messen, verfeinern und erweitern wir — und machen aus dem ersten Erfolg ein System, das weiter wächst."
+      }
+    ]
+  },
+  "useCases": {
+    "label": "In Der Praxis",
+    "title": "So Sieht Das In Ihrem Unternehmen Aus",
+    "subtitle": "Verschiedene Branchen, dasselbe Muster: weniger manuelle Arbeit, schnellere Reaktion, weniger Dinge, die durchs Raster fallen.",
+    "items": [
+      {
+        "industry": "Praxis",
+        "scenario": "Patienten schreiben rund um die Uhr, um Termine zu buchen, zu verschieben und nach Verfügbarkeit zu fragen — und der Empfang kommt nicht hinterher.",
+        "outcome": "Buchung und Erinnerungen laufen automatisch und synchronisieren sich mit dem Kalender, senken Ausfälle und schaffen Zeit für die Patienten vor Ort."
+      },
+      {
+        "industry": "Sprachschule",
+        "scenario": "Interessenten melden sich über WhatsApp, Instagram und E-Mail, und das Nachfassen hängt davon ab, wer es zufällig sieht.",
+        "outcome": "Jede Anfrage wird erfasst, sofort beantwortet und bis zur Anmeldung verfolgt — kein interessierter Schüler wird je vergessen."
+      },
+      {
+        "industry": "Immobilienbüro",
+        "scenario": "Leads kommen über Portale und Anzeigen, doch Qualifizierung und Weiterleitung an den richtigen Makler kosten Stunden, die der Lead nicht wartet.",
+        "outcome": "Leads werden qualifiziert, zugeordnet und zugewiesen, sobald sie eintreffen — jedes Detail landet direkt im CRM."
+      },
+      {
+        "industry": "Anwaltskanzlei",
+        "scenario": "Die Mandantenaufnahme bedeutet repetitive Formulare, Dokumentensammlung und Status-Updates, die erfahrene Köpfe in Verwaltungsarbeit ziehen.",
+        "outcome": "Aufnahme- und Dokumenten-Workflows laufen von selbst, halten Mandanten automatisch informiert, während sich die Kanzlei auf die Fälle konzentriert."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, Beantwortet",
+    "subtitle": "Klare Antworten auf das, was Unternehmen fragen, bevor wir beginnen.",
+    "items": [
+      {
+        "q": "Was kostet das?",
+        "a": "Jedes Projekt wird nach dem Ergebnis bemessen, das es liefert — es gibt also keinen Einheitspreis. Nach einem kurzen Gespräch erhalten Sie ein klares, festes Angebot — und die meisten Automatisierungen amortisieren sich durch gewonnene Zeit innerhalb weniger Monate."
+      },
+      {
+        "q": "Wie lange dauert die Umsetzung?",
+        "a": "Fokussierte Automatisierungen gehen oft in wenigen Wochen live, breitere Systemintegrationen dauern länger. Nach dem Audit erhalten Sie einen realistischen Zeitplan, bevor die Arbeit beginnt."
+      },
+      {
+        "q": "Funktioniert das mit meiner aktuellen Software?",
+        "a": "In den meisten Fällen ja. Ich baue rund um die Tools, die Sie bereits nutzen — CRM, Tabellen, Kalender, Messaging — statt Sie zum Wechsel zu zwingen. Getrennte Systeme zu verbinden ist ein Kernteil der Arbeit."
+      },
+      {
+        "q": "Brauche ich technisches Wissen?",
+        "a": "Überhaupt nicht. Sie bringen das tiefe Wissen über Ihr Geschäft mit; ich übernehme jede technische Entscheidung und erkläre alles unterwegs in klarer Sprache."
+      },
+      {
+        "q": "Arbeiten Sie international?",
+        "a": "Ja. Ich arbeite remote mit Kunden über Zeitzonen hinweg und liefere auf Portugiesisch, Englisch und Deutsch."
+      },
+      {
+        "q": "Können kleine Unternehmen profitieren?",
+        "a": "Gerade kleine Unternehmen. Wenn das Team schlank ist, hat jede aus repetitiver Arbeit zurückgewonnene Stunde überproportionale Wirkung — Automatisierung lässt Sie wie ein viel größeres Unternehmen agieren."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "Loslegen",
+    "title": "Entdecken Sie, Wo Ihr Unternehmen Zeit Verliert",
+    "text": "In einem kurzen Gespräch identifiziere ich praktische Möglichkeiten, Prozesse zu automatisieren und die Effizienz zu steigern — ganz unverbindlich.",
+    "bookCall": "Strategiegespräch buchen",
+    "whatsapp": "WhatsApp",
+    "email": "E-Mail",
+    "trust": {
+      "noObligation": "Unverbindlich",
+      "response": "Antwort innerhalb von 24 Stunden",
+      "direct": "Direkter Kontakt mit Tim-Luka Stahl"
+    }
+  },
+  "footer": {
+    "brand": "STEELFULLAI",
+    "tagline": "Spezialist für Geschäftsautomatisierung",
+    "founded": "Gegründet von Tim-Luka Stahl",
+    "location": "Rio de Janeiro, Brasilien",
+    "nav": "Navigation",
+    "connect": "Verbinden",
+    "language": "Sprache",
+    "rights": "Alle Rechte vorbehalten.",
+    "built": "Entworfen und gebaut von Tim-Luka Stahl"
+  },
+  "cta": {
+    "bookCall": "Strategiegespräch buchen",
+    "whatsapp": "WhatsApp",
+    "email": "E-Mail"
+  }
+}

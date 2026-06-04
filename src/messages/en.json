@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "SteelfullAI — Business Automation & Intelligent Systems",
+    "description": "I help businesses eliminate repetitive work, automate operations and improve customer response times through software, automation and intelligent systems. Work directly with Tim-Luka Stahl.",
+    "keywords": "business automation, AI automation, AI agents, process automation, custom software development, WhatsApp automation"
+  },
+  "nav": {
+    "problems": "Problems",
+    "process": "Process",
+    "about": "About",
+    "faq": "FAQ",
+    "bookCall": "Book Strategy Call",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Business Automation & Intelligent Systems",
+    "headline": "Transform Manual Processes Into Systems That Work For You",
+    "subheadline": "I help businesses eliminate repetitive work, automate operations and improve customer response times through software, automation and intelligent systems.",
+    "primaryCta": "Book Strategy Call",
+    "secondaryCta": "WhatsApp",
+    "trust": {
+      "direct": "Directly with Tim-Luka Stahl",
+      "noObligation": "No obligation",
+      "response": "Response within 24 hours"
+    },
+    "flow": {
+      "inquiry": "Customer Inquiry",
+      "inquiryMeta": "WhatsApp · Email · Form",
+      "automation": "Automation",
+      "automationMeta": "Routing · Logic · Rules",
+      "systems": "Business Systems",
+      "systemsMeta": "CRM · ERP · Calendar",
+      "result": "Result",
+      "resultMeta": "Answered · Logged · Done",
+      "caption": "A single inquiry, handled end to end — without anyone touching a keyboard."
+    }
+  },
+  "roi": {
+    "label": "Efficiency Calculator",
+    "title": "See What Repetitive Work Really Costs",
+    "question": "How many hours per week are lost to repetitive tasks?",
+    "inputSuffix": "hours / week",
+    "monthly": "Monthly hours lost",
+    "yearly": "Yearly hours lost",
+    "efficiency": "Recoverable through automation",
+    "weeksValue": "{count} weeks of full-time work each year",
+    "cta": "Discover Automation Opportunities",
+    "disclaimer": "Estimates based on typical automation recovering 70% of repetitive task time. Actual results are scoped during the audit."
+  },
+  "problem": {
+    "label": "The Problem",
+    "title": "The Hidden Cost of Manual Work",
+    "subtitle": "Most inefficiency is invisible. It hides inside everyday tasks that feel normal — until you add up the hours.",
+    "items": [
+      {
+        "title": "A customer waits for a reply",
+        "desc": "Messages arrive after hours and sit unanswered. By morning, the buying impulse — and sometimes the customer — is already gone."
+      },
+      {
+        "title": "An employee copies the same data",
+        "desc": "The same information is retyped from inbox to spreadsheet to CRM. Hours disappear into work that creates nothing new."
+      },
+      {
+        "title": "A lead is quietly forgotten",
+        "desc": "An inquiry slips between a chat app and a notebook. No one followed up, and no one noticed the revenue that walked away."
+      },
+      {
+        "title": "Systems that don't talk to each other",
+        "desc": "Your tools each hold a piece of the truth, but none of them share it. People become the integration — manually, every day."
+      },
+      {
+        "title": "Bottlenecks that only one person can clear",
+        "desc": "Work stalls because a single step depends on a single person. Growth makes the queue longer, not shorter."
+      }
+    ]
+  },
+  "transformation": {
+    "label": "The Shift",
+    "title": "What Changes After Automation",
+    "subtitle": "Same inquiry. Same systems. The difference is everything that used to happen in between.",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "beforeTag": "Manual · 5 handoffs · hours of delay",
+    "afterTag": "Automated · 1 workflow · seconds",
+    "before": [
+      {
+        "node": "WhatsApp",
+        "meta": "Message arrives"
+      },
+      {
+        "node": "Employee",
+        "meta": "Reads & interprets"
+      },
+      {
+        "node": "Spreadsheet",
+        "meta": "Copies data by hand"
+      },
+      {
+        "node": "CRM",
+        "meta": "Re-enters the same data"
+      },
+      {
+        "node": "Customer",
+        "meta": "Finally gets a reply"
+      }
+    ],
+    "after": [
+      {
+        "node": "WhatsApp",
+        "meta": "Message arrives"
+      },
+      {
+        "node": "SteelfullAI Workflow",
+        "meta": "Understands, routes, records"
+      },
+      {
+        "node": "CRM",
+        "meta": "Updated automatically"
+      },
+      {
+        "node": "Customer",
+        "meta": "Answered in seconds"
+      }
+    ]
+  },
+  "impact": {
+    "label": "Business Impact",
+    "title": "Outcomes You Can Measure",
+    "subtitle": "Automation isn't the goal. These are.",
+    "items": [
+      {
+        "stat": "Faster",
+        "title": "Faster customer response",
+        "desc": "Inquiries are acknowledged and routed instantly, day or night — so interest never cools while you sleep."
+      },
+      {
+        "stat": "Less",
+        "title": "Less repetitive work",
+        "desc": "The copy-paste tasks that drain your team's day are handled silently in the background."
+      },
+      {
+        "stat": "Clearer",
+        "title": "More operational visibility",
+        "desc": "Every inquiry, status and handoff is recorded — so you can see what's happening without asking around."
+      },
+      {
+        "stat": "Fewer",
+        "title": "Reduced manual errors",
+        "desc": "When data moves itself, it stops being retyped, mislabeled and lost between systems."
+      },
+      {
+        "stat": "Scalable",
+        "title": "Operations that scale",
+        "desc": "More volume no longer means more headcount. Your systems absorb the growth."
+      }
+    ]
+  },
+  "about": {
+    "label": "About",
+    "title": "Work Directly With The Person Building The Solution",
+    "greeting": "Hello, I'm Tim-Luka Stahl.",
+    "p1": "I'm a software developer and business automation specialist. I work directly with each client to identify inefficiencies, automate repetitive work and build systems that improve operations.",
+    "p2": "From the first strategy call to the live solution, there is no layer between us. You explain the problem to the person who designs and builds the answer.",
+    "points": [
+      "No sales team",
+      "No account managers",
+      "No outsourcing"
+    ],
+    "closing": "From strategy to implementation, you work directly with me."
+  },
+  "process": {
+    "label": "Process",
+    "title": "How It Works",
+    "subtitle": "A clear path from \"this is slowing us down\" to \"this runs itself.\"",
+    "steps": [
+      {
+        "title": "Audit",
+        "desc": "We map how work actually flows today — the tools, the handoffs and the hours quietly leaking out of your operation."
+      },
+      {
+        "title": "Strategy",
+        "desc": "I prioritize the automations with the highest return and lowest risk, then turn them into a concrete, sequenced plan."
+      },
+      {
+        "title": "Implementation",
+        "desc": "I design and build the solution, connect it to your existing systems and test it against real-world cases — directly with you."
+      },
+      {
+        "title": "Optimization",
+        "desc": "Once it's live, we measure, refine and expand — turning the first win into a system that keeps compounding."
+      }
+    ]
+  },
+  "useCases": {
+    "label": "In Practice",
+    "title": "What This Looks Like In Your Business",
+    "subtitle": "Different industries, the same pattern: less manual work, faster response, fewer things falling through the cracks.",
+    "items": [
+      {
+        "industry": "Clinic",
+        "scenario": "Patients message at all hours to book, reschedule and ask about availability — and the front desk can't keep up.",
+        "outcome": "Booking and reminders run automatically and sync to the calendar, cutting no-shows and freeing staff for patients in the room."
+      },
+      {
+        "industry": "Language School",
+        "scenario": "Prospective students inquire across WhatsApp, Instagram and email, and follow-up depends on whoever happens to see it.",
+        "outcome": "Every inquiry is captured, answered instantly and tracked to enrollment — so no interested student is ever forgotten."
+      },
+      {
+        "industry": "Real Estate Agency",
+        "scenario": "Leads arrive from portals and ads, but qualifying and routing them to the right agent takes hours the lead won't wait.",
+        "outcome": "Leads are qualified, matched and assigned the moment they arrive, with every detail logged straight into the CRM."
+      },
+      {
+        "industry": "Law Firm",
+        "scenario": "Intake means repetitive forms, document collection and status updates that pull senior people into administrative work.",
+        "outcome": "Intake and document workflows run themselves, keeping clients informed automatically while the firm focuses on casework."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions, Answered",
+    "subtitle": "Straight answers to what businesses ask before we start.",
+    "items": [
+      {
+        "q": "How much does it cost?",
+        "a": "Every project is scoped to the outcome it delivers, so there's no one-size price tag. After a short call I can give you a clear, fixed proposal — and most automations pay for themselves in recovered time within months."
+      },
+      {
+        "q": "How long does implementation take?",
+        "a": "Focused automations often go live in a few weeks, while broader system integrations take longer. After the audit you'll have a realistic timeline before any work begins."
+      },
+      {
+        "q": "Can it work with my current software?",
+        "a": "In most cases, yes. I build around the tools you already use — CRM, spreadsheets, calendars, messaging — rather than forcing you to replace them. Connecting disconnected systems is a core part of the work."
+      },
+      {
+        "q": "Do I need technical knowledge?",
+        "a": "None at all. You bring the deep knowledge of your business; I handle every technical decision and explain things in plain language as we go."
+      },
+      {
+        "q": "Do you work internationally?",
+        "a": "Yes. I work with clients remotely across time zones and deliver in Portuguese, English and German."
+      },
+      {
+        "q": "Can small businesses benefit?",
+        "a": "Especially small businesses. When the team is lean, every hour reclaimed from repetitive work has an outsized impact — automation lets you operate like a much larger company."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "Get Started",
+    "title": "Discover Where Your Business Is Losing Time",
+    "text": "In a short conversation I will identify practical opportunities to automate processes and improve efficiency — with no obligation to continue.",
+    "bookCall": "Book Strategy Call",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "trust": {
+      "noObligation": "No obligation",
+      "response": "Response within 24 hours",
+      "direct": "Direct contact with Tim-Luka Stahl"
+    }
+  },
+  "footer": {
+    "brand": "STEELFULLAI",
+    "tagline": "Business Automation Specialist",
+    "founded": "Founded by Tim-Luka Stahl",
+    "location": "Rio de Janeiro, Brazil",
+    "nav": "Navigation",
+    "connect": "Connect",
+    "language": "Language",
+    "rights": "All rights reserved.",
+    "built": "Designed & built by Tim-Luka Stahl"
+  },
+  "cta": {
+    "bookCall": "Book Strategy Call",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  }
+}

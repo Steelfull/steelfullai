@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "SteelfullAI — Automação Empresarial & Sistemas Inteligentes",
+    "description": "Ajudo empresas a eliminar trabalho repetitivo, automatizar operações e melhorar o tempo de resposta ao cliente através de software, automação e sistemas inteligentes. Trabalhe diretamente com Tim-Luka Stahl.",
+    "keywords": "automação empresarial, automação de processos, automação WhatsApp, inteligência artificial para empresas, agentes de IA, software sob medida"
+  },
+  "nav": {
+    "problems": "Problemas",
+    "process": "Processo",
+    "about": "Sobre",
+    "faq": "Perguntas",
+    "bookCall": "Agendar Conversa",
+    "menu": "Menu",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Automação Empresarial & Sistemas Inteligentes",
+    "headline": "Transforme Processos Manuais Em Sistemas Que Trabalham Por Você",
+    "subheadline": "Ajudo empresas a eliminar trabalho repetitivo, automatizar operações e melhorar o tempo de resposta ao cliente através de software, automação e sistemas inteligentes.",
+    "primaryCta": "Agendar Conversa",
+    "secondaryCta": "WhatsApp",
+    "trust": {
+      "direct": "Diretamente com Tim-Luka Stahl",
+      "noObligation": "Sem compromisso",
+      "response": "Resposta em até 24 horas"
+    },
+    "flow": {
+      "inquiry": "Contato do Cliente",
+      "inquiryMeta": "WhatsApp · E-mail · Formulário",
+      "automation": "Automação",
+      "automationMeta": "Roteamento · Lógica · Regras",
+      "systems": "Sistemas do Negócio",
+      "systemsMeta": "CRM · ERP · Agenda",
+      "result": "Resultado",
+      "resultMeta": "Respondido · Registrado · Pronto",
+      "caption": "Um único contato, resolvido do início ao fim — sem ninguém tocar no teclado."
+    }
+  },
+  "roi": {
+    "label": "Calculadora de Eficiência",
+    "title": "Veja Quanto o Trabalho Repetitivo Realmente Custa",
+    "question": "Quantas horas por semana são perdidas com tarefas repetitivas?",
+    "inputSuffix": "horas / semana",
+    "monthly": "Horas perdidas por mês",
+    "yearly": "Horas perdidas por ano",
+    "efficiency": "Recuperáveis com automação",
+    "weeksValue": "{count} semanas de trabalho em tempo integral por ano",
+    "cta": "Descobrir Oportunidades de Automação",
+    "disclaimer": "Estimativas baseadas em automações que tipicamente recuperam 70% do tempo gasto em tarefas repetitivas. Os resultados reais são definidos durante a auditoria."
+  },
+  "problem": {
+    "label": "O Problema",
+    "title": "O Custo Oculto do Trabalho Manual",
+    "subtitle": "A maior parte da ineficiência é invisível. Ela se esconde em tarefas do dia a dia que parecem normais — até você somar as horas.",
+    "items": [
+      {
+        "title": "Um cliente esperando resposta",
+        "desc": "Mensagens chegam fora do horário e ficam sem resposta. Pela manhã, o impulso de compra — e às vezes o cliente — já se foi."
+      },
+      {
+        "title": "Um funcionário copiando os mesmos dados",
+        "desc": "A mesma informação é redigitada do e-mail para a planilha e para o CRM. Horas desaparecem em trabalho que não cria nada novo."
+      },
+      {
+        "title": "Um lead esquecido em silêncio",
+        "desc": "Um contato se perde entre um aplicativo de mensagens e um caderno. Ninguém deu retorno, e ninguém percebeu a receita que foi embora."
+      },
+      {
+        "title": "Sistemas que não conversam entre si",
+        "desc": "Cada ferramenta guarda um pedaço da verdade, mas nenhuma compartilha. As pessoas viram a integração — manualmente, todos os dias."
+      },
+      {
+        "title": "Gargalos que só uma pessoa resolve",
+        "desc": "O trabalho trava porque uma única etapa depende de uma única pessoa. O crescimento aumenta a fila, em vez de reduzi-la."
+      }
+    ]
+  },
+  "transformation": {
+    "label": "A Mudança",
+    "title": "O Que Muda Depois da Automação",
+    "subtitle": "Mesmo contato. Mesmos sistemas. A diferença é tudo o que antes acontecia no meio.",
+    "beforeLabel": "Antes",
+    "afterLabel": "Depois",
+    "beforeTag": "Manual · 5 passagens · horas de atraso",
+    "afterTag": "Automatizado · 1 fluxo · segundos",
+    "before": [
+      {
+        "node": "WhatsApp",
+        "meta": "Mensagem chega"
+      },
+      {
+        "node": "Funcionário",
+        "meta": "Lê e interpreta"
+      },
+      {
+        "node": "Planilha",
+        "meta": "Copia os dados à mão"
+      },
+      {
+        "node": "CRM",
+        "meta": "Redigita os mesmos dados"
+      },
+      {
+        "node": "Cliente",
+        "meta": "Finalmente recebe resposta"
+      }
+    ],
+    "after": [
+      {
+        "node": "WhatsApp",
+        "meta": "Mensagem chega"
+      },
+      {
+        "node": "Fluxo SteelfullAI",
+        "meta": "Entende, roteia, registra"
+      },
+      {
+        "node": "CRM",
+        "meta": "Atualizado automaticamente"
+      },
+      {
+        "node": "Cliente",
+        "meta": "Respondido em segundos"
+      }
+    ]
+  },
+  "impact": {
+    "label": "Impacto no Negócio",
+    "title": "Resultados Que Você Pode Medir",
+    "subtitle": "A automação não é o objetivo. Isto é.",
+    "items": [
+      {
+        "stat": "Mais rápido",
+        "title": "Resposta mais rápida ao cliente",
+        "desc": "Os contatos são reconhecidos e roteados na hora, de dia ou de noite — para o interesse nunca esfriar enquanto você dorme."
+      },
+      {
+        "stat": "Menos",
+        "title": "Menos trabalho repetitivo",
+        "desc": "As tarefas de copiar e colar que consomem o dia da equipe passam a ser resolvidas em silêncio, em segundo plano."
+      },
+      {
+        "stat": "Mais claro",
+        "title": "Mais visibilidade operacional",
+        "desc": "Cada contato, status e passagem fica registrado — você enxerga o que está acontecendo sem precisar perguntar a ninguém."
+      },
+      {
+        "stat": "Menos",
+        "title": "Menos erros manuais",
+        "desc": "Quando os dados se movem sozinhos, eles param de ser redigitados, rotulados errado e perdidos entre sistemas."
+      },
+      {
+        "stat": "Escalável",
+        "title": "Operações que escalam",
+        "desc": "Mais volume deixa de significar mais gente. Seus sistemas absorvem o crescimento."
+      }
+    ]
+  },
+  "about": {
+    "label": "Sobre",
+    "title": "Trabalhe Diretamente Com Quem Constrói a Solução",
+    "greeting": "Olá, sou Tim-Luka Stahl.",
+    "p1": "Sou desenvolvedor de software e especialista em automação empresarial. Trabalho diretamente com cada cliente para identificar ineficiências, automatizar trabalho repetitivo e construir sistemas que melhoram as operações.",
+    "p2": "Da primeira conversa de estratégia até a solução no ar, não existe nenhuma camada entre nós. Você explica o problema para a mesma pessoa que projeta e constrói a resposta.",
+    "points": [
+      "Sem equipe de vendas",
+      "Sem gerentes de conta",
+      "Sem terceirização"
+    ],
+    "closing": "Da estratégia à implementação, você trabalha diretamente comigo."
+  },
+  "process": {
+    "label": "Processo",
+    "title": "Como Funciona",
+    "subtitle": "Um caminho claro de \"isto está nos atrasando\" até \"isto funciona sozinho\".",
+    "steps": [
+      {
+        "title": "Auditoria",
+        "desc": "Mapeamos como o trabalho realmente flui hoje — as ferramentas, as passagens e as horas que vazam silenciosamente da sua operação."
+      },
+      {
+        "title": "Estratégia",
+        "desc": "Priorizo as automações com maior retorno e menor risco e as transformo em um plano concreto e sequenciado."
+      },
+      {
+        "title": "Implementação",
+        "desc": "Projeto e construo a solução, conecto aos seus sistemas atuais e testo com casos reais — diretamente com você."
+      },
+      {
+        "title": "Otimização",
+        "desc": "Com a solução no ar, medimos, refinamos e expandimos — transformando a primeira vitória em um sistema que continua rendendo."
+      }
+    ]
+  },
+  "useCases": {
+    "label": "Na Prática",
+    "title": "Como Isto Funciona No Seu Negócio",
+    "subtitle": "Setores diferentes, o mesmo padrão: menos trabalho manual, resposta mais rápida e menos coisas se perdendo pelo caminho.",
+    "items": [
+      {
+        "industry": "Clínica",
+        "scenario": "Pacientes mandam mensagem a qualquer hora para agendar, remarcar e perguntar sobre disponibilidade — e a recepção não dá conta.",
+        "outcome": "Agendamentos e lembretes funcionam automaticamente e sincronizam com a agenda, reduzindo faltas e liberando a equipe para os pacientes presentes."
+      },
+      {
+        "industry": "Escola de Idiomas",
+        "scenario": "Interessados chegam por WhatsApp, Instagram e e-mail, e o retorno depende de quem por acaso vê a mensagem.",
+        "outcome": "Cada contato é capturado, respondido na hora e acompanhado até a matrícula — para nenhum aluno interessado ser esquecido."
+      },
+      {
+        "industry": "Imobiliária",
+        "scenario": "Leads chegam de portais e anúncios, mas qualificar e direcionar ao corretor certo leva horas que o lead não espera.",
+        "outcome": "Os leads são qualificados, combinados e atribuídos no momento em que chegam, com cada detalhe registrado direto no CRM."
+      },
+      {
+        "industry": "Escritório de Advocacia",
+        "scenario": "A captação envolve formulários repetitivos, coleta de documentos e atualizações de status que puxam profissionais sêniores para o trabalho administrativo.",
+        "outcome": "Os fluxos de captação e documentos funcionam sozinhos, mantendo os clientes informados automaticamente enquanto o escritório foca nos casos."
+      }
+    ]
+  },
+  "faq": {
+    "label": "Perguntas",
+    "title": "Perguntas, Respondidas",
+    "subtitle": "Respostas diretas ao que as empresas perguntam antes de começar.",
+    "items": [
+      {
+        "q": "Quanto custa?",
+        "a": "Cada projeto é dimensionado pelo resultado que entrega, então não há um preço único. Após uma conversa rápida, posso dar uma proposta clara e fechada — e a maioria das automações se paga em tempo recuperado em poucos meses."
+      },
+      {
+        "q": "Quanto tempo leva a implementação?",
+        "a": "Automações focadas costumam entrar no ar em poucas semanas, enquanto integrações mais amplas levam mais tempo. Após a auditoria, você terá um prazo realista antes de qualquer trabalho começar."
+      },
+      {
+        "q": "Funciona com o software que já uso?",
+        "a": "Na maioria dos casos, sim. Construo em torno das ferramentas que você já usa — CRM, planilhas, agendas, mensagens — em vez de forçar a troca. Conectar sistemas desconectados é parte central do trabalho."
+      },
+      {
+        "q": "Preciso de conhecimento técnico?",
+        "a": "Nenhum. Você traz o conhecimento profundo do seu negócio; eu cuido de cada decisão técnica e explico tudo em linguagem simples ao longo do caminho."
+      },
+      {
+        "q": "Você trabalha internacionalmente?",
+        "a": "Sim. Trabalho com clientes remotamente em diferentes fusos horários e atendo em português, inglês e alemão."
+      },
+      {
+        "q": "Pequenas empresas se beneficiam?",
+        "a": "Especialmente pequenas empresas. Quando a equipe é enxuta, cada hora recuperada do trabalho repetitivo tem um impacto enorme — a automação permite operar como uma empresa muito maior."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "Comece Agora",
+    "title": "Descubra Onde Sua Empresa Está Perdendo Tempo",
+    "text": "Em uma conversa curta eu identifico oportunidades práticas de automatizar processos e melhorar a eficiência — sem compromisso de continuar.",
+    "bookCall": "Agendar Conversa",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "trust": {
+      "noObligation": "Sem compromisso",
+      "response": "Resposta em até 24 horas",
+      "direct": "Contato direto com Tim-Luka Stahl"
+    }
+  },
+  "footer": {
+    "brand": "STEELFULLAI",
+    "tagline": "Especialista em Automação Empresarial",
+    "founded": "Fundada por Tim-Luka Stahl",
+    "location": "Rio de Janeiro, Brasil",
+    "nav": "Navegação",
+    "connect": "Conecte-se",
+    "language": "Idioma",
+    "rights": "Todos os direitos reservados.",
+    "built": "Projetado e construído por Tim-Luka Stahl"
+  },
+  "cta": {
+    "bookCall": "Agendar Conversa",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail"
+  }
+}
