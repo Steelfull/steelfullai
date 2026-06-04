@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Linkedin, Github, Instagram, Mail, MapPin } from 'lucide-react';
+import { Github, Mail, MapPin } from 'lucide-react';
 import { contact } from '@/config/contact';
 import { Logo } from './Logo';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -19,9 +19,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   const socials = [
-    { icon: Linkedin, href: contact.social.linkedin, label: 'LinkedIn' },
     { icon: Github, href: contact.social.github, label: 'GitHub' },
-    { icon: Instagram, href: contact.social.instagram, label: 'Instagram' },
     { icon: Mail, href: contact.emailUrl, label: 'Email', internal: true },
   ];
 
@@ -39,12 +37,6 @@ export function Footer() {
               <MapPin className="h-4 w-4 text-forest-500" />
               {t('location')}
             </p>
-            <a
-              href={contact.emailUrl}
-              className="text-sm text-ink-700 transition hover:text-forest-600"
-            >
-              {contact.emailAddress}
-            </a>
           </div>
 
           {/* Nav */}
