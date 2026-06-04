@@ -6,7 +6,7 @@
  * environment variables) to repoint every button at once.
  */
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5521999999999';
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5521989667160';
 const WHATSAPP_GREETING =
   process.env.NEXT_PUBLIC_WHATSAPP_GREETING ??
   'Hi Tim-Luka, I would like to talk about automating my business.';
