@@ -33,10 +33,10 @@ jobs:
       - name: Per SSH auf dem VPS bauen & neu starten
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
+          host: 187.77.228.95
+          username: tim
+          port: 22
           key: ${{ secrets.VPS_SSH_KEY }}
-          port: ${{ secrets.VPS_PORT }}
           script: |
             set -e
             cd /opt/steelfullai
