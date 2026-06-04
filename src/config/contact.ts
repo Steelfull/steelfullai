@@ -13,7 +13,7 @@ const WHATSAPP_GREETING =
 
 export const contact = {
   calendlyUrl:
-    process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/steelfullai/strategy-call',
+    process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/tim-luka_stahl',
   whatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_GREETING)}`,
   emailAddress: process.env.NEXT_PUBLIC_EMAIL_ADDRESS ?? 'tim@steelfullai.com',
   get emailUrl() {
