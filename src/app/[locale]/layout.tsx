@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { routing, type Locale } from '@/i18n/routing';
 import { LocalePersistence } from '@/components/LocalePersistence';
 import '../globals.css';
@@ -97,6 +98,11 @@ export default async function LocaleLayout({
           <LocalePersistence />
           {children}
         </NextIntlClientProvider>
+        <Script
+          defer
+          src="https://analytics.steelfullai.com/script.js"
+          data-website-id="5f17443d-aecf-4b2a-bcc8-2bba8ed3f49b"
+        />
       </body>
     </html>
   );
