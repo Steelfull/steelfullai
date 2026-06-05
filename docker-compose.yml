@@ -9,17 +9,42 @@ services:
       - NODE_ENV=production
     # Nur intern erreichbar – nach außen geht alles über Caddy
 
+  # Webanalyse (selbst gehostet, datenschutzfreundlich)
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    restart: unless-stopped
+    depends_on:
+      - umami-db
+    environment:
+      - DATABASE_URL=postgresql://umami:${UMAMI_DB_PASSWORD}@umami-db:5432/umami
+      - DATABASE_TYPE=postgresql
+      - APP_SECRET=${UMAMI_APP_SECRET}
+    expose:
+      - "3000"
+
+  umami-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=umami
+      - POSTGRES_USER=umami
+      - POSTGRES_PASSWORD=${UMAMI_DB_PASSWORD}
+    volumes:
+      - umami_db:/var/lib/postgresql/data
+
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
     depends_on:
       - app
+      - umami
     ports:
       - "80:80"
       - "443:443"
     environment:
-      # Wird aus der .env-Datei auf dem VPS gelesen (z. B. DOMAIN=deine-domain.de)
+      # Werden aus der .env-Datei auf dem VPS gelesen
       - DOMAIN=${DOMAIN}
+      - ANALYTICS_DOMAIN=${ANALYTICS_DOMAIN}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
@@ -28,3 +53,4 @@ services:
 volumes:
   caddy_data:
   caddy_config:
+  umami_db:

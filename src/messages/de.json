@@ -272,7 +272,9 @@
     "connect": "Verbinden",
     "language": "Sprache",
     "rights": "Alle Rechte vorbehalten.",
-    "built": "Entworfen und gebaut von Tim-Luka Stahl"
+    "built": "Entworfen und gebaut von Tim-Luka Stahl",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
   },
   "cta": {
     "bookCall": "Strategiegespräch buchen",

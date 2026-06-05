@@ -272,7 +272,9 @@
     "connect": "Conecte-se",
     "language": "Idioma",
     "rights": "Todos os direitos reservados.",
-    "built": "Projetado e construído por Tim-Luka Stahl"
+    "built": "Projetado e construído por Tim-Luka Stahl",
+    "imprint": "Aviso Legal",
+    "privacy": "Política de Privacidade"
   },
   "cta": {
     "bookCall": "Agendar Conversa",

@@ -272,7 +272,9 @@
     "connect": "Connect",
     "language": "Language",
     "rights": "All rights reserved.",
-    "built": "Designed & built by Tim-Luka Stahl"
+    "built": "Designed & built by Tim-Luka Stahl",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
   },
   "cta": {
     "bookCall": "Book Strategy Call",

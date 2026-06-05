@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Github, Mail, MapPin } from 'lucide-react';
 import { contact } from '@/config/contact';
+import { Link } from '@/i18n/navigation';
 import { Logo } from './Logo';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -86,10 +87,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-ink-900/10 pt-8 sm:flex-row sm:items-center">
+        <div className="mt-14 flex flex-col items-start gap-4 border-t border-ink-900/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-ink-400">
             © {year} STEELFULLAI. {t('rights')}
           </p>
+          <div className="flex items-center gap-5">
+            <Link
+              href="/impressum"
+              className="text-xs text-ink-400 transition hover:text-ink-900"
+            >
+              {t('imprint')}
+            </Link>
+            <Link
+              href="/datenschutz"
+              className="text-xs text-ink-400 transition hover:text-ink-900"
+            >
+              {t('privacy')}
+            </Link>
+          </div>
           <p className="text-xs text-ink-300">{t('built')}</p>
         </div>
       </div>
