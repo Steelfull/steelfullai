@@ -10,6 +10,9 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  // Keep the native better-sqlite3 module out of the bundle so its prebuilt
+  // binary is traced into the standalone output and loaded at runtime.
+  serverExternalPackages: ['better-sqlite3'],
 };
 
 export default withNextIntl(nextConfig);

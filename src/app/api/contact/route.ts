@@ -1,5 +1,9 @@
 import { NextResponse } from 'next/server';
 import { generateBriefing, notifyTim } from '@/lib/lead';
+import { rateLimit, clientIp } from '@/lib/rateLimit';
+
+// Each submission triggers a Sonnet briefing + an email, so guard it per IP.
+const CONTACT_PER_IP_PER_HOUR = Number(process.env.CONTACT_PER_IP_PER_HOUR ?? 5);
 
 /**
  * Contact form API — emails each submission to Tim with an internal AI briefing
@@ -21,6 +25,11 @@ export async function POST(req: Request) {
 
     // Honeypot: bots fill the hidden "company" field; humans never see it.
     if (body.company) return NextResponse.json({ ok: true });
+
+    const gate = rateLimit(`contact:${clientIp(req)}`, CONTACT_PER_IP_PER_HOUR, 60 * 60 * 1000);
+    if (!gate.ok) {
+      return NextResponse.json({ error: 'rate_limited' }, { status: 429 });
+    }
 
     const name = (body.name ?? '').trim().slice(0, 120);
     const email = (body.email ?? '').trim().slice(0, 200);

@@ -10,6 +10,17 @@ import { getIndustries, industryName } from '@/lib/industries';
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
+function makeSessionId(): string {
+  try {
+    if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+      return crypto.randomUUID();
+    }
+  } catch {
+    /* fall through */
+  }
+  return Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
 export function ChatWidget() {
   const t = useTranslations('chat');
   const locale = useLocale();
@@ -18,8 +29,13 @@ export function ChatWidget() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [industryId, setIndustryId] = useState('');
+  const [handoffOpen, setHandoffOpen] = useState(false);
+  const [handoffEmail, setHandoffEmail] = useState('');
+  const [handoffStatus, setHandoffStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
+    'idle',
+  );
+  const [sessionId] = useState(makeSessionId);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const silentSent = useRef(false);
 
   // Seed the greeting once.
   useEffect(() => {
@@ -48,6 +64,7 @@ export function ChatWidget() {
           messages: next.filter((_, i) => i !== 0),
           locale,
           industry: industryId ? industryName(industryId) : '',
+          sessionId,
         }),
       });
       const data = await res.json();
@@ -56,7 +73,6 @@ export function ChatWidget() {
         { role: 'assistant', content: res.ok && data.reply ? data.reply : t('error') },
       ];
       setMessages(full);
-      fireSilentLead(full, 4); // fallback only for long open conversations
     } catch {
       setMessages([...next, { role: 'assistant', content: t('error') }]);
     } finally {
@@ -73,37 +89,64 @@ export function ChatWidget() {
     ]);
   }
 
-  // Silent background hand-off: once a visitor has genuinely engaged, send the
-  // conversation to Tim with an internal AI briefing. The visitor never sees or
-  // knows about this — there is no UI for it.
-  function fireSilentLead(msgs: Msg[], minUser = 2) {
-    if (silentSent.current) return;
-    if (msgs.filter((m) => m.role === 'user').length < minUser) return;
-    silentSent.current = true;
-    fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        transcript: msgs.filter((_, i) => i !== 0),
-        industry: industryId ? industryName(industryId) : '',
-      }),
-    }).catch(() => {});
+  // Opt-in hand-off. This is the ONLY path that emails Tim — it runs only when
+  // the visitor explicitly chooses to send the chat and leaves a valid email.
+  const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(handoffEmail.trim());
+
+  async function sendHandoff() {
+    if (!emailIsValid || handoffStatus === 'sending') return;
+    setHandoffStatus('sending');
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          // Drop the seeded greeting (index 0) from the transcript.
+          transcript: messages.filter((_, i) => i !== 0),
+          email: handoffEmail.trim(),
+          industry: industryId ? industryName(industryId) : '',
+          sessionId,
+        }),
+      });
+      setHandoffStatus(res.ok ? 'sent' : 'error');
+    } catch {
+      setHandoffStatus('error');
+    }
+  }
+
+  // Fire-and-forget beacon when the visitor heads off to book a call.
+  function logBookCall() {
+    try {
+      const payload = JSON.stringify({ sessionId, outcome: 'clicked_book_call' });
+      if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+        navigator.sendBeacon('/api/log', new Blob([payload], { type: 'application/json' }));
+      } else {
+        fetch('/api/log', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true,
+        }).catch(() => {});
+      }
+    } catch {
+      /* noop */
+    }
   }
 
   const industries = getIndustries(locale);
   const suggestions = [t('suggest1'), t('suggest2'), t('suggest3')];
   const showIndustry = !industryId && messages.length <= 1 && !loading;
   const showSuggestions = !!industryId && messages.length <= 3 && !loading;
+  // Surface the "talk to Tim" hand-off only once a real need is on the table.
+  const userMsgCount = messages.filter((m) => m.role === 'user').length;
+  const showHandoff = userMsgCount >= 2 && !loading;
 
   return (
     <>
       {/* Launcher */}
       <button
         type="button"
-        onClick={() => {
-          if (open) fireSilentLead(messages); // closing — send heads-up to Tim
-          setOpen((v) => !v);
-        }}
+        onClick={() => setOpen((v) => !v)}
         aria-label={t('launcher')}
         className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-forest-500 text-canvas-soft shadow-[0_12px_30px_-8px_rgba(30,92,68,0.7)] transition hover:bg-forest-600 sm:bottom-6 sm:right-6"
       >
@@ -222,6 +265,57 @@ export function ChatWidget() {
                   ))}
                 </div>
               )}
+
+              {showHandoff && (
+                <div className="pt-2">
+                  {handoffStatus === 'sent' ? (
+                    <div className="rounded-2xl border border-forest-500/30 bg-forest-50 px-3.5 py-3 text-xs leading-relaxed text-forest-700">
+                      {t('handoffSent')}
+                    </div>
+                  ) : !handoffOpen ? (
+                    <button
+                      type="button"
+                      onClick={() => setHandoffOpen(true)}
+                      className="flex w-full items-center justify-center gap-2 rounded-full bg-forest-500 px-4 py-2.5 text-sm font-semibold text-canvas-soft transition hover:bg-forest-600"
+                    >
+                      <Send className="h-4 w-4" />
+                      {t('handoffButton')}
+                    </button>
+                  ) : (
+                    <div className="space-y-2 rounded-2xl border border-ink-900/10 bg-canvas-sunk p-3">
+                      <p className="text-xs leading-snug text-ink-500">{t('handoffPrompt')}</p>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="email"
+                          inputMode="email"
+                          autoComplete="email"
+                          value={handoffEmail}
+                          onChange={(e) => setHandoffEmail(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              e.preventDefault();
+                              sendHandoff();
+                            }
+                          }}
+                          placeholder={t('emailPlaceholder')}
+                          className="min-w-0 flex-1 rounded-full border border-ink-900/15 bg-canvas px-4 py-2 text-sm text-ink-900 placeholder:text-ink-400 focus:border-forest-500/60 focus:outline-none focus:ring-2 focus:ring-forest-500/20"
+                        />
+                        <button
+                          type="button"
+                          onClick={sendHandoff}
+                          disabled={handoffStatus === 'sending' || !emailIsValid}
+                          className="shrink-0 rounded-full bg-forest-500 px-4 py-2 text-sm font-semibold text-canvas-soft transition hover:bg-forest-600 disabled:opacity-50"
+                        >
+                          {t('handoffSend')}
+                        </button>
+                      </div>
+                      {handoffStatus === 'error' && (
+                        <p className="text-xs text-red-600">{t('handoffError')}</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Input */}
@@ -254,6 +348,7 @@ export function ChatWidget() {
                   href={contact.calendlyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={logBookCall}
                   className="inline-flex shrink-0 items-center gap-1 text-[11px] font-semibold text-forest-600 hover:text-forest-700"
                 >
                   <Calendar className="h-3 w-3" />

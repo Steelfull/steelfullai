@@ -3,6 +3,13 @@
 
 {$DOMAIN} {
 	encode zstd gzip
+
+	# Private chat-insights dashboard — only reachable with basic-auth.
+	@insights path /insights /insights/* /api/insights /api/insights/*
+	basic_auth @insights {
+		{$INSIGHTS_USER} {$INSIGHTS_PASSWORD_HASH}
+	}
+
 	reverse_proxy app:3000
 }
 

@@ -6,7 +6,8 @@ export default createMiddleware(routing);
 export const config = {
   // Match all pathnames except for
   // - API routes
+  // - the private /insights dashboard (its own non-localized root layout)
   // - Next.js internals (_next, _vercel)
   // - static files (containing a dot)
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!api|insights|_next|_vercel|.*\\..*).*)'],
 };

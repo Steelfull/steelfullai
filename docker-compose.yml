@@ -11,6 +11,9 @@ services:
       - .env
     environment:
       - NODE_ENV=production
+    volumes:
+      # Persistent SQLite store for the chat-insights logging + analysis.
+      - app_data:/data
     # Nur intern erreichbar – nach außen geht alles über Caddy
 
   # Webanalyse (selbst gehostet, datenschutzfreundlich)
@@ -49,12 +52,35 @@ services:
       # Werden aus der .env-Datei auf dem VPS gelesen
       - DOMAIN=${DOMAIN}
       - ANALYTICS_DOMAIN=${ANALYTICS_DOMAIN}
+      # Basic-auth credentials for the private /insights dashboard.
+      - INSIGHTS_USER=${INSIGHTS_USER}
+      - INSIGHTS_PASSWORD_HASH=${INSIGHTS_PASSWORD_HASH}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
 
+  # Weekly trigger for the chat-insights analysis. Calls the app directly on the
+  # internal network (the app port isn't exposed publicly, so no auth needed).
+  # Runs once on start, then every 7 days — swap for a real cron if you want
+  # exact timing (e.g. Monday 06:00).
+  insights-cron:
+    image: alpine:3.20
+    restart: unless-stopped
+    depends_on:
+      - app
+    command:
+      - sh
+      - -c
+      - >
+        apk add --no-cache curl >/dev/null 2>&1;
+        while true; do
+          curl -fsS -m 90 -X POST http://app:3000/api/insights >/dev/null 2>&1 || true;
+          sleep 604800;
+        done
+
 volumes:
   caddy_data:
   caddy_config:
   umami_db:
+  app_data:

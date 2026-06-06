@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
 import { generateBriefing, notifyTim } from '@/lib/lead';
+import { rateLimit, clientIp } from '@/lib/rateLimit';
+import { setOutcome } from '@/lib/insightsDb';
+
+// Each hand-off triggers a Sonnet briefing + an email, so guard it per IP.
+const LEAD_PER_IP_PER_HOUR = Number(process.env.LEAD_PER_IP_PER_HOUR ?? 5);
 
 /**
  * Chatbot hand-off API — a visitor sends their conversation to Tim. We turn the
@@ -15,6 +20,7 @@ type Payload = {
   name?: string;
   email?: string;
   industry?: string;
+  sessionId?: string;
   company?: string; // honeypot
 };
 
@@ -27,12 +33,18 @@ export async function POST(req: Request) {
     const body = (await req.json().catch(() => ({}))) as Payload;
     if (body.company) return NextResponse.json({ ok: true }); // honeypot
 
+    const gate = rateLimit(`lead:${clientIp(req)}`, LEAD_PER_IP_PER_HOUR, 60 * 60 * 1000);
+    if (!gate.ok) {
+      return NextResponse.json({ error: 'rate_limited' }, { status: 429 });
+    }
+
     // Silent background hand-off: a visitor's email is usually not available
     // (the lead never sees this). Include it only if it happens to be valid.
     const rawEmail = (body.email ?? '').trim().slice(0, 200);
     const email = isEmail(rawEmail) ? rawEmail : '';
     const name = (body.name ?? '').trim().slice(0, 120);
     const industry = (body.industry ?? '').trim().slice(0, 60);
+    const sessionId = (body.sessionId ?? '').trim().slice(0, 64);
 
     const turns = Array.isArray(body.transcript) ? body.transcript : [];
     const conversation = turns
@@ -55,6 +67,8 @@ export async function POST(req: Request) {
       console.error('Lead email failed', err);
       return NextResponse.json({ error: 'unconfigured' }, { status: 503 });
     }
+
+    setOutcome(sessionId, 'handoff_sent');
 
     return NextResponse.json({ ok: true });
   } catch (err) {
