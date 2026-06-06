@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { routing, type Locale } from '@/i18n/routing';
 import { LocalePersistence } from '@/components/LocalePersistence';
+import { ChatWidget } from '@/components/ChatWidget';
 import '../globals.css';
 
 const inter = Inter({
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <LocalePersistence />
           {children}
+          <ChatWidget />
         </NextIntlClientProvider>
         <Script
           defer

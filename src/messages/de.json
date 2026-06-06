@@ -15,8 +15,8 @@
   },
   "hero": {
     "badge": "Geschäftsautomatisierung & Intelligente Systeme",
-    "headline": "Verwandeln Sie Manuelle Prozesse In Systeme, Die Für Sie Arbeiten",
-    "subheadline": "Ich helfe Unternehmen, repetitive Arbeit zu eliminieren, Abläufe zu automatisieren und die Reaktionszeit gegenüber Kunden zu verbessern — durch Software, Automatisierung und intelligente Systeme.",
+    "headline": "Verlieren Sie Keine Zeit Und Keine Kunden Mehr An Manuelle Arbeit",
+    "subheadline": "Ich entwickle Automatisierung und individuelle Software, die Ihre wiederkehrenden Aufgaben und Kundenanfragen übernehmen — damit nichts durchrutscht und niemand wartet.",
     "primaryCta": "Strategiegespräch buchen",
     "secondaryCta": "WhatsApp",
     "trust": {
@@ -167,7 +167,33 @@
       "Keine Account-Manager",
       "Kein Outsourcing"
     ],
-    "closing": "Von der Strategie bis zur Umsetzung arbeiten Sie direkt mit mir."
+    "closing": "Von der Strategie bis zur Umsetzung arbeiten Sie direkt mit mir.",
+    "credentials": "Bachelorabschluss, Hochschule Flensburg · Ausgebildeter technischer Redakteur · Softwareentwickler & KI-Automatisierungs-Engineer · Entwickelt aktuell CE-Konformitätssoftware für ein deutsches Ingenieurbüro."
+  },
+  "selectedWork": {
+    "label": "Ausgewählte Projekte",
+    "title": "Echte Projekte, Bereits Umgesetzt",
+    "subtitle": "Keine Mock-ups — Systeme, die ich für eine Hochschule, ein Ingenieurbüro und mein eigenes Produkt entworfen und gebaut habe.",
+    "items": [
+      {
+        "name": "Hochschule Flensburg",
+        "tag": "Hochschulbildung · Web-App",
+        "title": "Modulhandbücher über alle Studiengänge hinweg standardisiert",
+        "desc": "Die Modulhandbücher waren über Dutzende Studiengänge verstreut, jedes mit eigenem Layout, eigener Gestaltung und Terminologie, von Hand gepflegt. Ich habe eine Web-Anwendung gebaut, in der alle Professoren an einem gemeinsamen Ort arbeiten — so entstehen die fertigen Handbücher einheitlich in Layout, Terminologie und Struktur, auf Deutsch und Englisch für internationale Studierende. Schneller erstellt, ganz ohne manuelle Nachbearbeitung."
+      },
+      {
+        "name": "Ingenieurbüro Leimkühler GmbH",
+        "tag": "Ingenieurwesen · CE / Maschinensicherheit",
+        "title": "Software, die CE-Dokumentation zur Maschinensicherheit erstellt",
+        "desc": "Ein Ingenieurbüro, spezialisiert auf CE-Konformität für Maschinensicherheit nach europäischen Normen. Ich arbeite dort als Entwickler, DevOps- und KI-Automatisierungs-Engineer und baue die Software, die ihre Konformitätsdokumentation erzeugt — meine Erfahrung als ausgebildeter technischer Redakteur kombiniert mit KI-Agenten, die die für die Maschinenzertifizierung nötigen Unterlagen entwerfen, strukturieren und prüfen."
+      },
+      {
+        "name": "educAItion",
+        "tag": "EdTech · Desktop-App · KI-Agent",
+        "title": "Ein ausgeliefertes KI-Produkt für die Bildung",
+        "desc": "Mein eigenes Produkt: eine Desktop-Anwendung für die Bildung mit integriertem Dokumenten-Editor (Word-/PDF-Export), Hausaufgaben- und Klassenverwaltung und einem KI-Agenten, der mit OpenAI, Anthropic, Gemini und lokalen Modellen arbeitet. Live, im aktiven Test, mit regelmäßigen Releases — der Beweis von Anfang bis Ende, was ich baue: Design, Software, KI und Auslieferung."
+      }
+    ]
   },
   "process": {
     "label": "Ablauf",
@@ -226,7 +252,7 @@
     "items": [
       {
         "q": "Was kostet das?",
-        "a": "Jedes Projekt wird nach dem Ergebnis bemessen, das es liefert — es gibt also keinen Einheitspreis. Nach einem kurzen Gespräch erhalten Sie ein klares, festes Angebot — und die meisten Automatisierungen amortisieren sich durch gewonnene Zeit innerhalb weniger Monate."
+        "a": "Es gibt keinen Festpreis, weil die richtige Lösung davon abhängt, was automatisiert wird. Deshalb läuft es so: Wir starten mit einem kostenlosen Audit, und bevor irgendeine Arbeit beginnt, erhalten Sie ein klares Festangebot — keine Überraschungen, keine Verpflichtung. Die meisten Automatisierungen amortisieren sich durch gewonnene Zeit innerhalb weniger Monate, und wir beginnen mit der, die am schnellsten am meisten zurückbringt."
       },
       {
         "q": "Wie lange dauert die Umsetzung?",
@@ -280,5 +306,40 @@
     "bookCall": "Strategiegespräch buchen",
     "whatsapp": "WhatsApp",
     "email": "E-Mail"
+  },
+  "contact": {
+    "label": "Nachricht Senden",
+    "title": "Sagen Sie Mir, Was Sie Ausbremst",
+    "subtitle": "Eine Zeile genügt. Ich lese jede Nachricht selbst und antworte innerhalb von 24 Stunden — unverbindlich.",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "message": "Was möchten Sie automatisieren oder verbessern?",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "success": "Danke — Ihre Nachricht ist angekommen. Ich antworte innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir auf WhatsApp.",
+    "orReachOut": "Oder direkt erreichen"
+  },
+  "chat": {
+    "launcher": "Mit mir chatten",
+    "title": "Fragen Sie mich",
+    "subtitle": "Von Tim gebaut — ein KI-Assistent wie die, die ich für Kunden entwickle.",
+    "greeting": "Hallo! Ich bin Tims Assistent. Erzählen Sie mir von Ihrem Unternehmen und was Ihre Zeit frisst — ich zeige Ihnen, wo Automatisierung helfen kann, und verbinde Sie mit Tim.",
+    "placeholder": "Nachricht schreiben…",
+    "send": "Senden",
+    "disclaimer": "KI-Assistent. Für Konkretes antwortet Tim persönlich.",
+    "suggest1": "Was können Sie für mich automatisieren?",
+    "suggest2": "Was kostet ein Projekt?",
+    "suggest3": "Ich führe eine Praxis — können Sie helfen?",
+    "error": "Entschuldigung, ich konnte gerade nicht antworten. Bitte erneut versuchen oder Tim auf WhatsApp schreiben.",
+    "bookCall": "Termin buchen",
+    "whatsapp": "WhatsApp",
+    "industryPrompt": "Was ist Ihre Branche?",
+    "handoffButton": "Chat an Tim senden",
+    "handoffPrompt": "Hinterlassen Sie Ihre E-Mail, dann sende ich Tim dieses Gespräch — er antwortet innerhalb von 24 Stunden.",
+    "emailPlaceholder": "Ihre E-Mail",
+    "handoffSend": "Senden",
+    "handoffSent": "Erledigt — Tim hat Ihr Gespräch und antwortet innerhalb von 24 Stunden.",
+    "handoffError": "Konnte gerade nicht senden. Bitte WhatsApp oder das Formular auf der Seite nutzen."
   }
 }

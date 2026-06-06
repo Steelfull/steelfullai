@@ -5,6 +5,10 @@ services:
     restart: unless-stopped
     expose:
       - "3000"
+    # Reads secrets (ANTHROPIC_API_KEY, SMTP_*, CONTACT_*) from the .env file
+    # on the VPS, next to this docker-compose.yml.
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
     # Nur intern erreichbar – nach außen geht alles über Caddy

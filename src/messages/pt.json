@@ -15,8 +15,8 @@
   },
   "hero": {
     "badge": "Automação Empresarial & Sistemas Inteligentes",
-    "headline": "Transforme Processos Manuais Em Sistemas Que Trabalham Por Você",
-    "subheadline": "Ajudo empresas a eliminar trabalho repetitivo, automatizar operações e melhorar o tempo de resposta ao cliente através de software, automação e sistemas inteligentes.",
+    "headline": "Pare De Perder Horas E Clientes Com Trabalho Manual",
+    "subheadline": "Eu construo automação e software sob medida que cuidam das suas tarefas repetitivas e dos contatos de clientes — para que nada escape e ninguém fique esperando.",
     "primaryCta": "Agendar Conversa",
     "secondaryCta": "WhatsApp",
     "trust": {
@@ -167,7 +167,33 @@
       "Sem gerentes de conta",
       "Sem terceirização"
     ],
-    "closing": "Da estratégia à implementação, você trabalha diretamente comigo."
+    "closing": "Da estratégia à implementação, você trabalha diretamente comigo.",
+    "credentials": "Bacharelado pela University of Applied Sciences Flensburg · Redator técnico formado · Desenvolvedor de software & engenheiro de automação com IA · Atualmente construindo software de conformidade CE para uma empresa de engenharia alemã."
+  },
+  "selectedWork": {
+    "label": "Projetos Selecionados",
+    "title": "Projetos Reais, Já Entregues",
+    "subtitle": "Não são protótipos — sistemas que projetei e construí para uma universidade, uma empresa de engenharia e meu próprio produto.",
+    "items": [
+      {
+        "name": "University of Applied Sciences Flensburg",
+        "tag": "Ensino Superior · Aplicação Web",
+        "title": "Manuais de módulos padronizados em todos os cursos",
+        "desc": "Os manuais de módulos estavam espalhados por dezenas de cursos, cada um com seu próprio layout, estilo e terminologia, mantidos manualmente. Construí uma aplicação web onde cada professor edita em um único lugar compartilhado — assim os manuais finais ficam consistentes em layout, terminologia e estrutura, em alemão e inglês para estudantes internacionais. Mais rápidos de produzir, sem nenhuma edição manual posterior."
+      },
+      {
+        "name": "Ingenieurbüro Leimkühler GmbH",
+        "tag": "Engenharia · CE / Segurança de Máquinas",
+        "title": "Software que gera a documentação CE de segurança de máquinas",
+        "desc": "Uma empresa de engenharia especializada em conformidade CE para segurança de máquinas segundo as normas europeias. Atuo como desenvolvedor, DevOps e engenheiro de automação com IA, construindo o software que produz a documentação de conformidade — unindo minha formação como redator técnico a agentes de IA que redigem, estruturam e verificam a papelada exigida pela certificação de máquinas."
+      },
+      {
+        "name": "educAItion",
+        "tag": "EdTech · App Desktop · Agente de IA",
+        "title": "Um produto de IA já em produção para a educação",
+        "desc": "Meu próprio produto: uma aplicação desktop para educação com editor de documentos integrado (exportação Word/PDF), gestão de tarefas e turmas, e um agente de IA que funciona com OpenAI, Anthropic, Gemini e modelos locais. No ar, em testes ativos, com lançamentos regulares — a prova completa do que construo: design, software, IA e entrega."
+      }
+    ]
   },
   "process": {
     "label": "Processo",
@@ -226,7 +252,7 @@
     "items": [
       {
         "q": "Quanto custa?",
-        "a": "Cada projeto é dimensionado pelo resultado que entrega, então não há um preço único. Após uma conversa rápida, posso dar uma proposta clara e fechada — e a maioria das automações se paga em tempo recuperado em poucos meses."
+        "a": "Não há um preço fixo, porque a solução certa depende do que vamos automatizar. Então funciona assim: começamos com uma auditoria gratuita e, antes de qualquer trabalho começar, você recebe um orçamento claro e fechado — sem surpresas, sem compromisso. A maioria das automações se paga em tempo recuperado em poucos meses, e começamos por aquela que traz mais retorno, mais rápido."
       },
       {
         "q": "Quanto tempo leva a implementação?",
@@ -280,5 +306,40 @@
     "bookCall": "Agendar Conversa",
     "whatsapp": "WhatsApp",
     "email": "E-mail"
+  },
+  "contact": {
+    "label": "Enviar Mensagem",
+    "title": "Conte O Que Está Te Travando",
+    "subtitle": "Uma linha já basta. Eu mesmo leio cada mensagem e respondo em até 24 horas — sem compromisso.",
+    "name": "Seu nome",
+    "email": "E-mail",
+    "message": "O que você gostaria de automatizar ou melhorar?",
+    "send": "Enviar mensagem",
+    "sending": "Enviando…",
+    "success": "Obrigado — sua mensagem chegou. Respondo em até 24 horas.",
+    "error": "Algo deu errado. Tente novamente ou fale comigo no WhatsApp.",
+    "orReachOut": "Ou fale diretamente"
+  },
+  "chat": {
+    "launcher": "Converse comigo",
+    "title": "Pergunte o que quiser",
+    "subtitle": "Construído por Tim — um assistente de IA como os que eu crio para clientes.",
+    "greeting": "Olá! Sou o assistente do Tim. Conte sobre o seu negócio e o que consome o seu tempo — mostro onde a automação pode ajudar e te conecto com o Tim.",
+    "placeholder": "Digite sua mensagem…",
+    "send": "Enviar",
+    "disclaimer": "Assistente de IA. Para algo específico, o Tim responde pessoalmente.",
+    "suggest1": "O que você pode automatizar para mim?",
+    "suggest2": "Quanto custa um projeto?",
+    "suggest3": "Tenho uma clínica — você pode ajudar?",
+    "error": "Desculpe, não consegui responder agora. Tente novamente ou fale com o Tim no WhatsApp.",
+    "bookCall": "Agendar conversa",
+    "whatsapp": "WhatsApp",
+    "industryPrompt": "Qual é o seu setor?",
+    "handoffButton": "Enviar conversa ao Tim",
+    "handoffPrompt": "Deixe seu e-mail e eu envio esta conversa ao Tim — ele responde em até 24 horas.",
+    "emailPlaceholder": "Seu e-mail",
+    "handoffSend": "Enviar",
+    "handoffSent": "Pronto — o Tim recebeu sua conversa e vai responder em até 24 horas.",
+    "handoffError": "Não consegui enviar agora. Tente o WhatsApp ou o formulário na página."
   }
 }

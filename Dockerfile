@@ -29,8 +29,8 @@ RUN addgroup --system --gid 1001 nodejs \
 # Standalone-Output von Next.js kopieren
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
-# public-Ordner nur kopieren, falls vorhanden (auskommentiert lassen, wenn keiner existiert)
-# COPY --from=builder /app/public ./public
+# public-Ordner (enthält jetzt das Foto und weitere Assets) ins Image kopieren
+COPY --from=builder /app/public ./public
 
 USER nextjs
 EXPOSE 3000

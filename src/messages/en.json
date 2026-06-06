@@ -15,8 +15,8 @@
   },
   "hero": {
     "badge": "Business Automation & Intelligent Systems",
-    "headline": "Transform Manual Processes Into Systems That Work For You",
-    "subheadline": "I help businesses eliminate repetitive work, automate operations and improve customer response times through software, automation and intelligent systems.",
+    "headline": "Stop Losing Hours and Customers to Manual Work",
+    "subheadline": "I build automation and custom software that handle your repetitive tasks and customer inquiries — so nothing slips through and no one waits.",
     "primaryCta": "Book Strategy Call",
     "secondaryCta": "WhatsApp",
     "trust": {
@@ -167,7 +167,33 @@
       "No account managers",
       "No outsourcing"
     ],
-    "closing": "From strategy to implementation, you work directly with me."
+    "closing": "From strategy to implementation, you work directly with me.",
+    "credentials": "Bachelor's degree, University of Applied Sciences Flensburg · Trained technical writer · Software developer & AI-automation engineer · Currently building CE-compliance software for a German engineering firm."
+  },
+  "selectedWork": {
+    "label": "Selected Work",
+    "title": "Real Projects, Already Shipped",
+    "subtitle": "Not mock-ups — systems I have designed and built for a university, an engineering firm, and my own product.",
+    "items": [
+      {
+        "name": "University of Applied Sciences Flensburg",
+        "tag": "Higher Education · Web App",
+        "title": "Standardized module handbooks across every degree program",
+        "desc": "Module handbooks were scattered across dozens of degree programs, each with its own layout, styling and terminology, maintained by hand. I built a web application where every professor edits in one shared place — so the final handbooks come out consistent in layout, terminology and structure, in German and English for international students. Faster to produce, with no manual post-editing."
+      },
+      {
+        "name": "Ingenieurbüro Leimkühler GmbH",
+        "tag": "Engineering · CE / Machine Safety",
+        "title": "Software that generates CE machine-safety documentation",
+        "desc": "An engineering office specializing in CE conformity for machine safety under European standards. I work as their developer, DevOps and AI-automation engineer, building the software that produces their compliance documentation — pairing my background as a trained technical writer with AI agents that draft, structure and check the paperwork machine certification demands."
+      },
+      {
+        "name": "educAItion",
+        "tag": "EdTech · Desktop App · AI Agent",
+        "title": "A shipped AI product for education",
+        "desc": "My own product: a desktop application for education with a built-in document editor (Word/PDF export), homework and class management, and an AI agent that works across OpenAI, Anthropic, Gemini and local models. Live, in active testing, with regular releases — end-to-end proof of what I build: design, software, AI and shipping."
+      }
+    ]
   },
   "process": {
     "label": "Process",
@@ -226,7 +252,7 @@
     "items": [
       {
         "q": "How much does it cost?",
-        "a": "Every project is scoped to the outcome it delivers, so there's no one-size price tag. After a short call I can give you a clear, fixed proposal — and most automations pay for themselves in recovered time within months."
+        "a": "There's no fixed price tag, because the right solution depends on what we're automating. So here's how it works: we start with a free audit, and before any work begins you get a clear, fixed quote — no surprises, no obligation. Most automations pay for themselves in recovered time within months, and we start with the one that returns the most, fastest."
       },
       {
         "q": "How long does implementation take?",
@@ -280,5 +306,40 @@
     "bookCall": "Book Strategy Call",
     "whatsapp": "WhatsApp",
     "email": "Email"
+  },
+  "contact": {
+    "label": "Send a Message",
+    "title": "Tell Me What's Slowing You Down",
+    "subtitle": "One line is enough. I read every message myself and reply within 24 hours — no obligation.",
+    "name": "Your name",
+    "email": "Email",
+    "message": "What would you like to automate or improve?",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thanks — your message reached me. I'll reply within 24 hours.",
+    "error": "Something went wrong. Please try again, or reach me on WhatsApp.",
+    "orReachOut": "Or reach me directly"
+  },
+  "chat": {
+    "launcher": "Chat with me",
+    "title": "Ask me anything",
+    "subtitle": "Built by Tim — an AI assistant like the ones I build for clients.",
+    "greeting": "Hi! I'm Tim's assistant. Tell me about your business and what's eating your time — I'll show you where automation could help, and connect you with Tim.",
+    "placeholder": "Type your message…",
+    "send": "Send",
+    "disclaimer": "AI assistant. For anything specific, Tim replies personally.",
+    "suggest1": "What can you automate for me?",
+    "suggest2": "How much does a project cost?",
+    "suggest3": "I run a clinic — can you help?",
+    "error": "Sorry, I couldn't respond just now. Please try again or message Tim on WhatsApp.",
+    "bookCall": "Book a call",
+    "whatsapp": "WhatsApp",
+    "industryPrompt": "What's your field?",
+    "handoffButton": "Send chat to Tim",
+    "handoffPrompt": "Leave your email and I'll send this conversation to Tim — he replies within 24 hours.",
+    "emailPlaceholder": "Your email",
+    "handoffSend": "Send",
+    "handoffSent": "Done — Tim has your conversation and will reply within 24 hours.",
+    "handoffError": "Couldn't send just now. Please try WhatsApp or the form on the page."
   }
 }

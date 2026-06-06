@@ -7,9 +7,10 @@ import { ProblemSection } from '@/components/ProblemSection';
 import { TransformationSection } from '@/components/TransformationSection';
 import { ImpactSection } from '@/components/ImpactSection';
 import { AboutSection } from '@/components/AboutSection';
+import { SelectedWorkSection } from '@/components/SelectedWorkSection';
 import { ProcessSection } from '@/components/ProcessSection';
-import { UseCasesSection } from '@/components/UseCasesSection';
 import { FaqSection } from '@/components/FaqSection';
+import { ContactSection } from '@/components/ContactSection';
 import { FinalCta } from '@/components/FinalCta';
 import { Footer } from '@/components/Footer';
 import { StructuredData } from '@/components/StructuredData';
@@ -40,9 +41,10 @@ export default async function HomePage({
         <TransformationSection />
         <ImpactSection />
         <AboutSection />
+        <SelectedWorkSection />
         <ProcessSection />
-        <UseCasesSection />
         <FaqSection />
+        <ContactSection />
         <FinalCta />
       </main>
       <Footer />

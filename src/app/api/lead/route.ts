@@ -1,0 +1,64 @@
+import { NextResponse } from 'next/server';
+import { generateBriefing, notifyTim } from '@/lib/lead';
+
+/**
+ * Chatbot hand-off API — a visitor sends their conversation to Tim. We turn the
+ * transcript into a project description, generate an internal AI briefing, and
+ * email it to Tim. Shares the logic in src/lib/lead.ts with the contact form.
+ */
+
+export const runtime = 'nodejs';
+
+type Turn = { role: 'user' | 'assistant'; content: string };
+type Payload = {
+  transcript?: Turn[];
+  name?: string;
+  email?: string;
+  industry?: string;
+  company?: string; // honeypot
+};
+
+function isEmail(v: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+export async function POST(req: Request) {
+  try {
+    const body = (await req.json().catch(() => ({}))) as Payload;
+    if (body.company) return NextResponse.json({ ok: true }); // honeypot
+
+    // Silent background hand-off: a visitor's email is usually not available
+    // (the lead never sees this). Include it only if it happens to be valid.
+    const rawEmail = (body.email ?? '').trim().slice(0, 200);
+    const email = isEmail(rawEmail) ? rawEmail : '';
+    const name = (body.name ?? '').trim().slice(0, 120);
+    const industry = (body.industry ?? '').trim().slice(0, 60);
+
+    const turns = Array.isArray(body.transcript) ? body.transcript : [];
+    const conversation = turns
+      .filter((t) => t && (t.role === 'user' || t.role === 'assistant') && typeof t.content === 'string')
+      .slice(-20)
+      .map((t) => `${t.role === 'user' ? 'Visitor' : 'Assistant'}: ${t.content.slice(0, 1500)}`)
+      .join('\n');
+
+    if (!conversation) {
+      return NextResponse.json({ error: 'empty' }, { status: 400 });
+    }
+
+    const projectText = `Chatbot conversation${industry ? ` (industry: ${industry})` : ''}:\n\n${conversation}`;
+
+    const briefing = await generateBriefing(projectText);
+
+    try {
+      await notifyTim({ source: 'chat', name, email, industry, projectText }, briefing);
+    } catch (err) {
+      console.error('Lead email failed', err);
+      return NextResponse.json({ error: 'unconfigured' }, { status: 503 });
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error('Lead route error', err);
+    return NextResponse.json({ error: 'server' }, { status: 500 });
+  }
+}

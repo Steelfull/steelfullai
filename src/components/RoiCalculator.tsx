@@ -4,11 +4,9 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
-import { contact } from '@/config/contact';
 import { AnimatedNumber } from './ui/AnimatedNumber';
 import { Reveal } from './ui/Reveal';
 
-const RECOVERY_RATE = 0.7; // share of repetitive-task time recoverable via automation
 const MAX_HOURS = 40;
 
 export function RoiCalculator() {
@@ -18,13 +16,11 @@ export function RoiCalculator() {
 
   const monthly = hours * 4.33;
   const yearly = hours * 52;
-  const recoverable = yearly * RECOVERY_RATE;
-  const weeks = recoverable / 40;
+  const weeks = yearly / 40; // full-time weeks lost to repetitive work each year
 
   const metrics = [
     { label: t('monthly'), value: monthly, decimals: 0 },
-    { label: t('yearly'), value: yearly, decimals: 0 },
-    { label: t('efficiency'), value: recoverable, decimals: 0, accent: true },
+    { label: t('yearly'), value: yearly, decimals: 0, accent: true },
   ];
 
   const pct = (hours / MAX_HOURS) * 100;
@@ -100,18 +96,18 @@ export function RoiCalculator() {
                   ))}
                 </div>
 
-                <p className="mt-4 text-sm text-ink-400">
-                  ≈{' '}
-                  <span className="font-medium text-ink-700">
-                    <AnimatedNumber value={weeks} decimals={1} locale={locale} />
-                  </span>{' '}
-                  {t('weeksValue', { count: '' }).replace('{count}', '').trim()}
-                </p>
+                <div className="mt-5 rounded-2xl bg-forest-50 px-5 py-4">
+                  <p className="text-sm leading-relaxed text-ink-700">
+                    ≈{' '}
+                    <span className="font-mono text-lg font-semibold text-forest-600">
+                      <AnimatedNumber value={weeks} decimals={1} locale={locale} />
+                    </span>{' '}
+                    {t('weeksValue', { count: '' }).replace('{count}', '').trim()}
+                  </p>
+                </div>
 
                 <a
-                  href={contact.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#message"
                   className="group mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-forest-500 px-6 py-3.5 text-sm font-semibold text-canvas-soft transition hover:bg-forest-600"
                 >
                   {t('cta')}
@@ -121,10 +117,6 @@ export function RoiCalculator() {
                 </a>
               </div>
             </div>
-
-            <p className="relative mt-8 max-w-2xl text-xs leading-relaxed text-ink-400">
-              {t('disclaimer')}
-            </p>
           </div>
         </Reveal>
       </div>

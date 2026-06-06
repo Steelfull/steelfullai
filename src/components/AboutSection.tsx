@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
@@ -14,7 +15,24 @@ export function AboutSection() {
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="container-content">
-        <div className="mx-auto max-w-3xl">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
+          {/* Photo */}
+          <Reveal>
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+              <div className="absolute -inset-3 -z-10 rounded-[2.25rem] bg-forest-500/[0.06] blur-2xl" />
+              <div className="overflow-hidden rounded-[2rem] border border-ink-900/10 shadow-soft">
+                <Image
+                  src="/assets/tim.jpg"
+                  alt="Tim-Luka Stahl"
+                  width={800}
+                  height={1000}
+                  className="h-full w-full object-cover"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </Reveal>
+
           {/* Copy */}
           <div className="flex flex-col">
             <Reveal>
@@ -24,17 +42,17 @@ export function AboutSection() {
               </span>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="heading-lg mt-5 max-w-2xl">{t('title')}</h2>
+              <h2 className="heading-lg mt-5">{t('title')}</h2>
             </Reveal>
 
             <Reveal delay={0.1}>
               <p className="mt-7 text-xl font-medium text-ink-900">{t('greeting')}</p>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-4 max-w-2xl leading-relaxed text-ink-500">{t('p1')}</p>
+              <p className="mt-4 leading-relaxed text-ink-500">{t('p1')}</p>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-2xl leading-relaxed text-ink-500">{t('p2')}</p>
+              <p className="mt-4 leading-relaxed text-ink-500">{t('p2')}</p>
             </Reveal>
 
             <motion.ul
@@ -60,9 +78,13 @@ export function AboutSection() {
             </motion.ul>
 
             <Reveal delay={0.25}>
-              <p className="mt-8 max-w-2xl border-l-2 border-forest-500/50 pl-5 text-lg font-medium text-ink-900">
+              <p className="mt-8 border-l-2 border-forest-500/50 pl-5 text-lg font-medium text-ink-900">
                 {t('closing')}
               </p>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <p className="mt-8 text-sm leading-relaxed text-ink-400">{t('credentials')}</p>
             </Reveal>
           </div>
         </div>

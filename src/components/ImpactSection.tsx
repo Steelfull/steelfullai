@@ -50,10 +50,7 @@ export function ImpactSection() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-forest-500">
-                      {item.stat}
-                    </p>
-                    <h3 className="mt-1.5 text-xl font-semibold text-ink-900">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-ink-900">{item.title}</h3>
                     <p className="mt-2 max-w-lg leading-relaxed text-ink-500">{item.desc}</p>
                   </div>
                 </motion.li>
