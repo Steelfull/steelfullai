@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, X, Send, Calendar } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { contact } from '@/config/contact';
 import { getIndustries, industryName } from '@/lib/industries';
 
@@ -154,7 +155,20 @@ export function ChatWidget() {
                         : 'bg-canvas-sunk text-ink-800'
                     }`}
                   >
-                    {m.content}
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                        strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                        em: ({ children }) => <em className="italic">{children}</em>,
+                        ul: ({ children }) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                        ol: ({ children }) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        a: ({ children, href }) => <a href={href} className="underline hover:opacity-80" target="_blank" rel="noopener noreferrer">{children}</a>,
+                        code: ({ children }) => <code className="bg-ink-900/10 px-2 py-0.5 rounded text-xs">{children}</code>,
+                      }}
+                    >
+                      {m.content}
+                    </ReactMarkdown>
                   </div>
                 </div>
               ))}
