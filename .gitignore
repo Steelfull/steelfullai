@@ -26,3 +26,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# lead engine — generated data + local secrets
+leadgen/data/leads.json
+leadgen/data/leads.csv
+leadgen/data/optout.json
+leadgen/.env

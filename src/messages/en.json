@@ -2,7 +2,7 @@
   "meta": {
     "title": "SteelfullAI — Business Automation & Intelligent Systems",
     "description": "I help businesses eliminate repetitive work, automate operations and improve customer response times through software, automation and intelligent systems. Work directly with Tim-Luka Stahl.",
-    "keywords": "business automation, AI automation, AI agents, process automation, custom software development, WhatsApp automation"
+    "keywords": "business automation, AI automation, AI agents, process automation, custom software development, WhatsApp automation, automation for freelancers, self-employed, small businesses, Rio de Janeiro"
   },
   "nav": {
     "problems": "Problems",
@@ -268,11 +268,11 @@
       },
       {
         "q": "Do you work internationally?",
-        "a": "Yes. I work with clients remotely across time zones and deliver in Portuguese, English and German."
+        "a": "Yes. I work with clients remotely across time zones and deliver in Portuguese, English and German. For clients in Rio de Janeiro, I also offer in-person support."
       },
       {
-        "q": "Can small businesses benefit?",
-        "a": "Especially small businesses. When the team is lean, every hour reclaimed from repetitive work has an outsized impact — automation lets you operate like a much larger company."
+        "q": "Do small businesses and individuals benefit?",
+        "a": "Especially small businesses. When the team is lean, every hour reclaimed from repetitive work has an outsized impact — automation lets you operate like a much larger company. That applies to freelancers and self-employed professionals too — I don't work only with companies."
       }
     ]
   },
@@ -318,7 +318,20 @@
     "sending": "Sending…",
     "success": "Thanks — your message reached me. I'll reply within 24 hours.",
     "error": "Something went wrong. Please try again, or reach me on WhatsApp.",
-    "orReachOut": "Or reach me directly"
+    "orReachOut": "Or reach me directly",
+    "service": "Type of service",
+    "servicePlaceholder": "Select the type of service",
+    "services": {
+      "automation": "Process automation / WhatsApp",
+      "software": "Custom software",
+      "integration": "Systems integration (CRM/ERP)",
+      "aiagents": "AI agents / chatbots",
+      "audit": "Not sure yet — I'd like an audit"
+    },
+    "meetingLabel": "How would you like to talk?",
+    "meetingInPerson": "In person in Rio de Janeiro",
+    "meetingOnline": "Online / remote",
+    "bookCall": "Book a call"
   },
   "chat": {
     "launcher": "Chat with me",

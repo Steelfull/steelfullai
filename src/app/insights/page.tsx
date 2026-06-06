@@ -96,7 +96,15 @@ export default function InsightsPage() {
             Last {PERIOD_DAYS} days · analysis last run: {lastRun}
           </p>
         </div>
-        <RunButton />
+        <div className="flex items-center gap-3">
+          <a
+            href="/insights/leads"
+            className="rounded-full border border-ink-900/15 bg-canvas-raised px-4 py-2 text-sm font-medium text-ink-700 shadow-soft transition hover:border-forest-500/40"
+          >
+            Leads →
+          </a>
+          <RunButton />
+        </div>
       </div>
 
       {empty ? (

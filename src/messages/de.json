@@ -2,7 +2,7 @@
   "meta": {
     "title": "SteelfullAI — Geschäftsautomatisierung & Intelligente Systeme",
     "description": "Ich helfe Unternehmen, repetitive Arbeit zu eliminieren, Abläufe zu automatisieren und die Reaktionszeit gegenüber Kunden zu verbessern — durch Software, Automatisierung und intelligente Systeme. Direkt mit Tim-Luka Stahl.",
-    "keywords": "Geschäftsautomatisierung, Prozessautomatisierung, KI Automatisierung, Softwareentwicklung, KI-Agenten, WhatsApp Automatisierung"
+    "keywords": "Geschäftsautomatisierung, Prozessautomatisierung, KI Automatisierung, Softwareentwicklung, KI-Agenten, WhatsApp Automatisierung, Automatisierung für Selbstständige, Freiberufler, kleine Unternehmen, Rio de Janeiro"
   },
   "nav": {
     "problems": "Probleme",
@@ -268,11 +268,11 @@
       },
       {
         "q": "Arbeiten Sie international?",
-        "a": "Ja. Ich arbeite remote mit Kunden über Zeitzonen hinweg und liefere auf Portugiesisch, Englisch und Deutsch."
+        "a": "Ja. Ich arbeite remote mit Kunden über Zeitzonen hinweg und liefere auf Portugiesisch, Englisch und Deutsch. Für Kunden in Rio de Janeiro bin ich auch persönlich vor Ort."
       },
       {
-        "q": "Können kleine Unternehmen profitieren?",
-        "a": "Gerade kleine Unternehmen. Wenn das Team schlank ist, hat jede aus repetitiver Arbeit zurückgewonnene Stunde überproportionale Wirkung — Automatisierung lässt Sie wie ein viel größeres Unternehmen agieren."
+        "q": "Profitieren auch kleine Unternehmen und Einzelpersonen?",
+        "a": "Gerade kleine Unternehmen. Wenn das Team schlank ist, hat jede aus repetitiver Arbeit zurückgewonnene Stunde überproportionale Wirkung — Automatisierung lässt Sie wie ein viel größeres Unternehmen agieren. Das gilt auch für Selbstständige und Freiberufler — ich arbeite nicht nur mit Unternehmen."
       }
     ]
   },
@@ -318,7 +318,20 @@
     "sending": "Wird gesendet…",
     "success": "Danke — Ihre Nachricht ist angekommen. Ich antworte innerhalb von 24 Stunden.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir auf WhatsApp.",
-    "orReachOut": "Oder direkt erreichen"
+    "orReachOut": "Oder direkt erreichen",
+    "service": "Art der Dienstleistung",
+    "servicePlaceholder": "Art der Dienstleistung wählen",
+    "services": {
+      "automation": "Prozessautomatisierung / WhatsApp",
+      "software": "Individuelle Software",
+      "integration": "Systemintegration (CRM/ERP)",
+      "aiagents": "KI-Agenten / Chatbots",
+      "audit": "Noch unsicher — ich möchte eine Analyse"
+    },
+    "meetingLabel": "Wie möchten Sie sprechen?",
+    "meetingInPerson": "Persönlich in Rio de Janeiro",
+    "meetingOnline": "Online / remote",
+    "bookCall": "Gespräch buchen"
   },
   "chat": {
     "launcher": "Mit mir chatten",

@@ -82,6 +82,8 @@ export type Lead = {
   name?: string;
   email?: string;
   industry?: string;
+  service?: string; // requested service type (from the contact form)
+  meeting?: string; // preferred meeting mode: in person (Rio) / online
   projectText: string; // the description / transcript used for the briefing
 };
 
@@ -122,6 +124,8 @@ export async function notifyTim(lead: Lead, briefing: string | null): Promise<vo
     lead.name ? `Name: ${lead.name}` : null,
     lead.email ? `Email: ${lead.email}` : null,
     lead.industry ? `Industry: ${lead.industry}` : null,
+    lead.service ? `Service: ${lead.service}` : null,
+    lead.meeting ? `Meeting: ${lead.meeting}` : null,
   ].filter(Boolean) as string[];
 
   const briefingBlock = briefing

@@ -12,7 +12,16 @@ type Status = 'idle' | 'sending' | 'success' | 'error';
 export function ContactSection() {
   const t = useTranslations('contact');
   const [status, setStatus] = useState<Status>('idle');
-  const [form, setForm] = useState({ name: '', email: '', message: '', company: '' });
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+    service: '',
+    meeting: '',
+    company: '',
+  });
+
+  const serviceOptions = ['automation', 'software', 'integration', 'aiagents', 'audit'] as const;
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -26,7 +35,7 @@ export function ContactSection() {
       });
       if (!res.ok) throw new Error('failed');
       setStatus('success');
-      setForm({ name: '', email: '', message: '', company: '' });
+      setForm({ name: '', email: '', message: '', service: '', meeting: '', company: '' });
     } catch {
       setStatus('error');
     }
@@ -111,6 +120,47 @@ export function ContactSection() {
                       className={field}
                     />
                   </div>
+
+                  <select
+                    required
+                    value={form.service}
+                    onChange={(e) => setForm({ ...form, service: e.target.value })}
+                    className={`${field} ${form.service === '' ? 'text-ink-400' : 'text-ink-900'}`}
+                  >
+                    <option value="" disabled>
+                      {t('servicePlaceholder')}
+                    </option>
+                    {serviceOptions.map((s) => (
+                      <option key={s} value={s} className="text-ink-900">
+                        {t(`services.${s}`)}
+                      </option>
+                    ))}
+                  </select>
+
+                  <div>
+                    <p className="mb-2 text-sm font-medium text-ink-500">{t('meetingLabel')}</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      {(['inperson', 'online'] as const).map((m) => {
+                        const active = form.meeting === m;
+                        return (
+                          <button
+                            key={m}
+                            type="button"
+                            onClick={() => setForm({ ...form, meeting: active ? '' : m })}
+                            aria-pressed={active}
+                            className={`rounded-xl border px-4 py-3 text-sm font-medium transition ${
+                              active
+                                ? 'border-forest-500 bg-forest-50 text-forest-700'
+                                : 'border-ink-900/15 bg-canvas-raised text-ink-500 hover:border-forest-500/40'
+                            }`}
+                          >
+                            {m === 'inperson' ? t('meetingInPerson') : t('meetingOnline')}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
                   <textarea
                     required
                     rows={5}

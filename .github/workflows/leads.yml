@@ -1,0 +1,31 @@
+# Daily lead refresh on GitHub's runners (no server cron needed).
+# Add these repository secrets: GOOGLE_PLACES_API_KEY, ANTHROPIC_API_KEY,
+# SITE_URL, INSIGHTS_USER, INSIGHTS_PASSWORD, (optional) LEADS_INGEST_SECRET.
+name: Daily lead refresh
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 09:00 UTC ≈ 06:00 in Rio (BRT)
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # leadgen has no npm dependencies — it uses Node's built-in fetch.
+      - name: Collect, enrich and push leads
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          INSIGHTS_USER: ${{ secrets.INSIGHTS_USER }}
+          INSIGHTS_PASSWORD: ${{ secrets.INSIGHTS_PASSWORD }}
+          LEADS_INGEST_SECRET: ${{ secrets.LEADS_INGEST_SECRET }}
+        run: |
+          node leadgen/cli.js source
+          node leadgen/cli.js enrich
+          node leadgen/cli.js push

@@ -2,7 +2,7 @@
   "meta": {
     "title": "SteelfullAI — Automação Empresarial & Sistemas Inteligentes",
     "description": "Ajudo empresas a eliminar trabalho repetitivo, automatizar operações e melhorar o tempo de resposta ao cliente através de software, automação e sistemas inteligentes. Trabalhe diretamente com Tim-Luka Stahl.",
-    "keywords": "automação empresarial, automação de processos, automação WhatsApp, inteligência artificial para empresas, agentes de IA, software sob medida"
+    "keywords": "automação empresarial, automação de processos, automação WhatsApp, inteligência artificial para empresas, agentes de IA, software sob medida, automação para autônomos, profissionais liberais, pequenas empresas, Rio de Janeiro"
   },
   "nav": {
     "problems": "Problemas",
@@ -268,11 +268,11 @@
       },
       {
         "q": "Você trabalha internacionalmente?",
-        "a": "Sim. Trabalho com clientes remotamente em diferentes fusos horários e atendo em português, inglês e alemão."
+        "a": "Sim. Trabalho com clientes remotamente em diferentes fusos horários e atendo em português, inglês e alemão. Para clientes no Rio de Janeiro, também atendo presencialmente."
       },
       {
-        "q": "Pequenas empresas se beneficiam?",
-        "a": "Especialmente pequenas empresas. Quando a equipe é enxuta, cada hora recuperada do trabalho repetitivo tem um impacto enorme — a automação permite operar como uma empresa muito maior."
+        "q": "Pequenas empresas e autônomos se beneficiam?",
+        "a": "Especialmente pequenas empresas. Quando a equipe é enxuta, cada hora recuperada do trabalho repetitivo tem um impacto enorme — a automação permite operar como uma empresa muito maior. Isso vale também para autônomos e profissionais liberais — não trabalho apenas com empresas."
       }
     ]
   },
@@ -318,7 +318,20 @@
     "sending": "Enviando…",
     "success": "Obrigado — sua mensagem chegou. Respondo em até 24 horas.",
     "error": "Algo deu errado. Tente novamente ou fale comigo no WhatsApp.",
-    "orReachOut": "Ou fale diretamente"
+    "orReachOut": "Ou fale diretamente",
+    "service": "Tipo de serviço",
+    "servicePlaceholder": "Selecione o tipo de serviço",
+    "services": {
+      "automation": "Automação de processos / WhatsApp",
+      "software": "Software sob medida",
+      "integration": "Integração de sistemas (CRM/ERP)",
+      "aiagents": "Agentes de IA / chatbots",
+      "audit": "Não tenho certeza — quero uma auditoria"
+    },
+    "meetingLabel": "Como prefere a conversa?",
+    "meetingInPerson": "Presencial no Rio de Janeiro",
+    "meetingOnline": "Online / remoto",
+    "bookCall": "Agendar conversa"
   },
   "chat": {
     "launcher": "Converse comigo",

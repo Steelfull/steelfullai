@@ -13,11 +13,31 @@ const CONTACT_PER_IP_PER_HOUR = Number(process.env.CONTACT_PER_IP_PER_HOUR ?? 5)
 
 export const runtime = 'nodejs';
 
-type Payload = { name?: string; email?: string; message?: string; company?: string };
+type Payload = {
+  name?: string;
+  email?: string;
+  message?: string;
+  service?: string;
+  meeting?: string;
+  company?: string;
+};
 
 function isEmail(v: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 }
+
+// Stable keys sent by the form -> readable labels for Tim's internal email.
+const SERVICE_LABELS: Record<string, string> = {
+  automation: 'Process automation / WhatsApp',
+  software: 'Custom software',
+  integration: 'Systems integration (CRM/ERP)',
+  aiagents: 'AI agents / chatbots',
+  audit: 'Not sure yet - wants an audit',
+};
+const MEETING_LABELS: Record<string, string> = {
+  inperson: 'In person (Rio de Janeiro)',
+  online: 'Online / remote',
+};
 
 export async function POST(req: Request) {
   try {
@@ -39,11 +59,21 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'invalid' }, { status: 400 });
     }
 
+    // Optional qualifiers from the form (only accept known values).
+    const service = SERVICE_LABELS[body.service ?? ''] ?? undefined;
+    const meeting = MEETING_LABELS[body.meeting ?? ''] ?? undefined;
+
+    // Give the briefing model the chosen service as context, too.
+    const projectText = service ? `Requested service: ${service}\n\n${message}` : message;
+
     // Best-effort internal briefing (never blocks the lead from being sent).
-    const briefing = await generateBriefing(message);
+    const briefing = await generateBriefing(projectText);
 
     try {
-      await notifyTim({ source: 'form', name, email, projectText: message }, briefing);
+      await notifyTim(
+        { source: 'form', name, email, service, meeting, projectText: message },
+        briefing
+      );
     } catch (err) {
       console.error('Contact email failed', err);
       return NextResponse.json({ error: 'unconfigured' }, { status: 503 });
